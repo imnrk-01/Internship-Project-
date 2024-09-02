@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: black;
+}
+.text{
+    color:aquamarine;
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+}
+.text p{
+    position: relative;
+}
+.text p::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: black;
+    border-left:1px solid chocolate;
+    animation:type 1.3s steps(10) infinite ;
+}
+.center{
+    position:relative;
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(13, 13, 61, 0.781);
+    width:300px;
+    overflow:hidden;
+    box-shadow: 0 0 10px 20px rgba(13, 13, 61, 0.781);
+}
+.display input{
+    position: relative;
+    box-sizing: border-box;
+    width:100%;
+    border-radius:10px;
+    margin-top: 5px;
+    height:30px;
+    margin-bottom: 5px;
+    text-align: right;
+    font-size: large;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content input{
+    border-radius: 50%;
+    text-align:center;
+    font-size: medium;
+    padding: 12px;
+    margin-left:10px;
+   
+   width:50px;
+   height:50px;
+    background-color: orange;
+    color: azure;
+   
+
+}
+@keyframes type{
+    100%{
+       left:100%;
+       margin:0 -3.6vw 0 3.6vw
+
+    }
+}
+@media only screen and (min-height=1000px ) {
+    div.cal-cont{
+        overflow: scroll;
+    }
+}
